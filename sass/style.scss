@@ -1,0 +1,99 @@
+$font-stack: 'Montserrat', sans-serif;
+$bg-color: #282828;
+$text-color: #ebdbb2;
+$def-text-size: 32px;
+
+
+html, body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $def-text-size;
+  font-family: $font-stack;
+}
+
+$link-color: orange; 
+$link-hover-color: #d90368;
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: $link-color;
+  border-bottom: 1px solid $link-color;
+  transition: .1s;
+  
+  &:hover {
+    color: $link-hover-color;
+    border-bottom: 2px solid $link-hover-color;
+  }
+}
+
+h1#title {
+  font-size: $def-text-size;
+
+  &:before {
+    content: "char* title = \""; 
+    font-family: mono;
+    font-weight: normal;
+    
+  }
+  
+  &:after {
+    content: "\";"; 
+    font-family: mono;
+  }
+
+
+}
+
+section { 
+  &:before {
+    content: "int main(int nargs, char* argv) {\a";
+  }
+  &:after {
+    content: "\a}";
+  }
+  
+  & > * {
+    margin:0;
+    padding:0;
+    padding-left: 2em;
+  }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin:  0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  li {
+    padding-right: .5em;
+    
+    &:after { 
+      content: ",";
+    }
+    &:before { 
+      content: "&";
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+
+  &:before {
+    content: "void (*links)()[] = { ";
+    padding-right: .5em;
+  }
+  &:after {
+    content: "};"
+  }
+}
+
+
+.code-hacks:before, .code-hacks:after, .code {
+  font-family: mono;
+  filter: opacity(70%) contrast(10%) grayscale(10%) ;
+}

@@ -1,0 +1,59 @@
+html, body {
+  background-color: #282828;
+  color: #ebdbb2;
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif; }
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: orange;
+  border-bottom: 1px solid orange;
+  transition: .1s; }
+  a:hover {
+    color: #d90368;
+    border-bottom: 2px solid #d90368; }
+
+h1#title {
+  font-size: 32px; }
+  h1#title:before {
+    content: "char* title = \"";
+    font-family: mono;
+    font-weight: normal; }
+  h1#title:after {
+    content: "\";";
+    font-family: mono; }
+
+section:before {
+  content: "int main(int nargs, char* argv) {\a"; }
+section:after {
+  content: "\a}"; }
+section > * {
+  margin: 0;
+  padding: 0;
+  padding-left: 2em; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  nav ul li {
+    padding-right: .5em; }
+    nav ul li:after {
+      content: ","; }
+    nav ul li:before {
+      content: "&"; }
+    nav ul li:last-child:after {
+      content: ""; }
+  nav ul:before {
+    content: "void (*links)()[] = { ";
+    padding-right: .5em; }
+  nav ul:after {
+    content: "};"; }
+
+.code-hacks:before, .code-hacks:after, .code {
+  font-family: mono;
+  filter: opacity(70%) contrast(10%) grayscale(10%); }

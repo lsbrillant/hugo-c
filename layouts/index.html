@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="code-hacks">
+  <h1 id="title" class="code-hacks">{{ .Site.Title }}</h1>
+  {{ with .Site.Params.links }}
+  <nav>
+  <ul class="code-hacks">
+    {{ range sort . }}
+    <li class="code-hacks"><a href="{{ .url }}">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+  </nav>
+  {{ end }}
+</section>
+{{ end }}
