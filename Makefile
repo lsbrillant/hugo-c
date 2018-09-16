@@ -1,8 +1,8 @@
 SASS_DIR = ./sass
 SASS_FILE = style.scss
 
-CSS_DIR = ./static
-CSS_FILE = style.css
+CSS_DIR = ./static/css
+CSS_FILE = C.css
 
 .PHONY: build_style build clean
 

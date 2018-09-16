@@ -84,7 +84,7 @@ nav ul {
   }
 
   &:before {
-    content: "void (*links)()[] = { ";
+    content: "void (*nav)()[] = { ";
     padding-right: .5em;
   }
   &:after {
