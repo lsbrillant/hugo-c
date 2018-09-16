@@ -105,5 +105,13 @@ nav ul {
   html, body, h1#title {
     font-size: $sm-text-size;
   }
+
+  nav ul {
+    flex-direction: column;
+    li {
+      padding-left: 1em;
+      padding-top: .2em;
+    }
+  }
   
 }

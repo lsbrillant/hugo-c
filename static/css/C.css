@@ -60,4 +60,10 @@ nav ul {
 
 @media only screen and (max-width: 600px) {
   html, body, h1#title {
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  nav ul {
+    flex-direction: column; }
+    nav ul li {
+      padding-left: 1em;
+      padding-top: .2em; } }
