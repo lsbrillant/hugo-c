@@ -56,7 +56,7 @@ section {
   & > * {
     margin:0;
     padding:0;
-    padding-left: 2em;
+    padding-left: 1em;
   }
 }
 
@@ -96,4 +96,14 @@ nav ul {
 .code-hacks:before, .code-hacks:after, .code {
   font-family: mono;
   filter: opacity(70%) contrast(10%) grayscale(10%) ;
+}
+
+
+@media only screen and (max-width: 600px) {
+  $sm-text-size: round($def-text-size * .75);
+
+  html, body, h1#title {
+    font-size: $sm-text-size;
+  }
+  
 }
