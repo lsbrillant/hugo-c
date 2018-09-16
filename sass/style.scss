@@ -44,7 +44,7 @@ h1#title {
 
 section { 
   &:before {
-    content: "int main(int nargs, char* argv) {\a";
+    content: "int main(int nargs, char** argv) {\a";
   }
   &:after {
     content: "\a}";
@@ -79,15 +79,12 @@ nav ul {
       content: "";
     }
   }
+  
+  &:before {
+    content: "void (*"attr(id)")()[] = { ";
+    padding-right: .5em;
+  }
 
-  &#nav:before {
-    content: "void (*nav)()[] = { ";
-    padding-right: .5em;
-  }
-  &#social:before {
-    content: "void (*social)()[] = { ";
-    padding-right: .5em;
-  }
   &:after {
     content: "};"
   }
@@ -107,6 +104,13 @@ nav ul {
   html, body, h1#title {
     font-size: $sm-text-size;
   }
+
+  section { 
+    &:before {
+      content: "int main() {\a";
+    }
+  }
+
   h1#title:before {
     content: "char* title =\a \"";
     white-space: pre;

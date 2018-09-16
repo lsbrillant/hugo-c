@@ -23,7 +23,7 @@ h1#title {
     content: "\";"; }
 
 section:before {
-  content: "int main(int nargs, char* argv) {\a"; }
+  content: "int main(int nargs, char** argv) {\a"; }
 section:after {
   content: "\a}"; }
 section > * {
@@ -46,11 +46,8 @@ nav ul {
       content: "&"; }
     nav ul li:last-child:after {
       content: ""; }
-  nav ul#nav:before {
-    content: "void (*nav)()[] = { ";
-    padding-right: .5em; }
-  nav ul#social:before {
-    content: "void (*social)()[] = { ";
+  nav ul:before {
+    content: "void (*" attr(id) ")()[] = { ";
     padding-right: .5em; }
   nav ul:after {
     content: "};"; }
@@ -63,6 +60,9 @@ nav ul {
 @media only screen and (max-width: 600px) {
   html, body, h1#title {
     font-size: 24px; }
+
+  section:before {
+    content: "int main() {\a"; }
 
   h1#title:before {
     content: "char* title =\a \"";
