@@ -15,14 +15,12 @@ a {
     border-bottom: 2px solid #d90368; }
 
 h1#title {
-  font-size: 32px; }
+  font-size: 32px;
+  white-space: nowrap; }
   h1#title:before {
-    content: "char* title = \"";
-    font-family: mono;
-    font-weight: normal; }
+    content: "char* title = \""; }
   h1#title:after {
-    content: "\";";
-    font-family: mono; }
+    content: "\";"; }
 
 section:before {
   content: "int main(int nargs, char* argv) {\a"; }
@@ -48,19 +46,27 @@ nav ul {
       content: "&"; }
     nav ul li:last-child:after {
       content: ""; }
-  nav ul:before {
+  nav ul#nav:before {
     content: "void (*nav)()[] = { ";
+    padding-right: .5em; }
+  nav ul#social:before {
+    content: "void (*social)()[] = { ";
     padding-right: .5em; }
   nav ul:after {
     content: "};"; }
 
 .code-hacks:before, .code-hacks:after, .code {
-  font-family: mono;
+  font-family: monospace;
+  font-weight: normal;
   filter: opacity(70%) contrast(10%) grayscale(10%); }
 
 @media only screen and (max-width: 600px) {
   html, body, h1#title {
     font-size: 24px; }
+
+  h1#title:before {
+    content: "char* title =\a \"";
+    white-space: pre; }
 
   nav ul {
     flex-direction: column; }

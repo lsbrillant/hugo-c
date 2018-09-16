@@ -29,17 +29,14 @@ a {
 
 h1#title {
   font-size: $def-text-size;
-
+  white-space: nowrap;  
   &:before {
     content: "char* title = \""; 
-    font-family: mono;
-    font-weight: normal;
     
   }
   
   &:after {
     content: "\";"; 
-    font-family: mono;
   }
 
 
@@ -83,8 +80,12 @@ nav ul {
     }
   }
 
-  &:before {
+  &#nav:before {
     content: "void (*nav)()[] = { ";
+    padding-right: .5em;
+  }
+  &#social:before {
+    content: "void (*social)()[] = { ";
     padding-right: .5em;
   }
   &:after {
@@ -94,7 +95,8 @@ nav ul {
 
 
 .code-hacks:before, .code-hacks:after, .code {
-  font-family: mono;
+  font-family: monospace;
+  font-weight: normal;
   filter: opacity(70%) contrast(10%) grayscale(10%) ;
 }
 
@@ -104,6 +106,11 @@ nav ul {
 
   html, body, h1#title {
     font-size: $sm-text-size;
+  }
+  h1#title:before {
+    content: "char* title =\a \"";
+    white-space: pre;
+    
   }
 
   nav ul {
