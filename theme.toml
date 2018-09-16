@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "C"
+license = "MIT"
+licenselink = "https://github.com/lsbrillant/hugo-C/blob/master/LICENSE"
+description = "For when you want your website to look like a valid C program."
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Lucien Brillant"
+  homepage = "https://lucienbrillant.com/"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
