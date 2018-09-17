@@ -6,9 +6,9 @@
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
-  <link rel="stylesheet" type="text/css" href="css/C.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/C.css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
   
-  <base href="{{ .Site.BaseURL }}"/>
+  <!--base href="{{ .Site.BaseURL }}"/-->
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 </head>

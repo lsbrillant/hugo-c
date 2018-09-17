@@ -1,27 +1,2 @@
-{{ define "main" }}
-<section class="code-hacks">
-  <h1 id="title" class="code-hacks">{{ .Site.Title }}</h1>
-  
-  {{ with .Site.Menus.main }}
-  <nav>
-    <ul id="nav" class="code-hacks">
-      {{ range sort . }}
-      <li class="code-hacks"><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
-  {{ end }}
-  
-  {{ with .Site.Params.social }}
-  <nav>
-    <ul  id="social" class="code-hacks">
-      {{ range sort . }}
-      <li class="code-hacks"><a href="{{ .url }}">{{ .name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
-  {{ end }}
-
-
-</section>
-{{ end }}
+{{define "main"}} 
+{{end}}

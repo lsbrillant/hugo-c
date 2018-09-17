@@ -27,11 +27,11 @@ a {
   }
 }
 
-h1#title {
+h1 {
   font-size: $def-text-size;
   white-space: nowrap;  
   &:before {
-    content: "char* title = \""; 
+    content: "char* "attr(data-varname)" = \""; 
     
   }
   
@@ -43,9 +43,14 @@ h1#title {
 }
 
 section { 
-  &:before {
+  &.header:before {
     content: "int main(int nargs, char** argv) {\a";
   }
+
+  &:before { 
+    content: "void "attr(data-varname)"() {\a";
+  }
+
   &:after {
     content: "\a}";
   }
@@ -81,7 +86,7 @@ nav ul {
   }
   
   &:before {
-    content: "void (*"attr(id)")()[] = { ";
+    content: "void (*"attr(data-varname)")()[] = { ";
     padding-right: .5em;
   }
 
@@ -97,6 +102,36 @@ nav ul {
   filter: opacity(70%) contrast(10%) grayscale(10%) ;
 }
 
+footer {
+  height: 6.0rem;
+  width: 100%;
+  text-align: center;
+  line-height: 6.0rem;
+  font-size: round($def-text-size * .75);
+
+  &:before {
+    content: "/* ";
+    padding-right: .5em;
+  }
+  &:after {
+    content: " */";
+    padding-left: .5em;
+  }
+}
+
+div.content {
+  &:before {
+    content: "char* "attr(data-varname)" = \"\a";
+  }
+  &:after {
+    content: "\a\";";
+  }
+
+  p {
+    margin: 0;
+    padding:0;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   $sm-text-size: round($def-text-size * .75);
@@ -112,9 +147,8 @@ nav ul {
   }
 
   h1#title:before {
-    content: "char* title =\a \"";
+    content: "char* "attr(data-varname)" =\a \"";
     white-space: pre;
-    
   }
 
   nav ul {
@@ -125,4 +159,7 @@ nav ul {
     }
   }
   
+  footer {
+    font-size: round($sm-text-size * .75);
+  }
 }

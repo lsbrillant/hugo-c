@@ -1,0 +1,9 @@
+{{ define "main" }}
+<section class="code-hacks" data-varname="{{ replace (replace .URL " " "_") "/" ""}}">
+  <h1 class="code-hacks" data-varname="title">
+    {{- .Title -}}</h1>
+  <div class="code-hacks content" data-varname="{{ replace .Title " " "_" | lower }}">
+  {{ .Content }}
+  </div>
+</section>
+{{ end }}
