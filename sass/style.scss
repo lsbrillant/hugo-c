@@ -141,7 +141,7 @@ div.content {
   }
 
   section { 
-    &:before {
+    &.header:before {
       content: "int main() {\a";
     }
   }

@@ -84,7 +84,7 @@ div.content p {
   html, body, h1 {
     font-size: 24px; }
 
-  section:before {
+  section.header:before {
     content: "int main() {\a"; }
 
   h1:before {
