@@ -146,7 +146,7 @@ div.content {
     }
   }
 
-  h1#title:before {
+  h1:before {
     content: "char* "attr(data-varname)" =\a \"";
     white-space: pre;
   }
