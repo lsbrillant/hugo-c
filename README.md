@@ -8,7 +8,7 @@ a C program.
 
   Run this command in the root directory of your site.
   ```
-  git clone https://github.com/lsbrillant/hugo-c ./themes/C
+  git clone https://github.com/lsbrillant/hugo-c.git ./themes/C
   ```
 
 
