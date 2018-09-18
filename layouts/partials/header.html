@@ -1,4 +1,11 @@
 <section class="code-hacks header">
+  <span id="home-link" class="code-hacks"><a  href="{{ .Site.BaseURL }}">
+    {{- with .Site.Params.main_link_name -}}
+      {{- . -}}
+    {{- else -}}
+      main
+    {{- end -}}
+    </a></span>
   <h1 id="title" class="code-hacks" data-varname="name">{{ .Site.Title }}</h1>
   
   {{ with .Site.Menus.main }}

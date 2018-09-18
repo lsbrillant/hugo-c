@@ -43,9 +43,23 @@ h1 {
 }
 
 section { 
-  &.header:before {
-    content: "int main(int nargs, char** argv) {\a";
+  &.header {
+    #home-link {
+      text-decoration: none;
+      margin-left: -1em;
+      &:before {
+        content: "int ";
+      }
+      &:after {
+        content: "(int nargs, char** argv) {\a";
+      }
+    }
+
+    &:before {
+      content: "";
+    }
   }
+  
 
   &:before { 
     content: "void "attr(data-varname)"() {\a";
@@ -128,8 +142,14 @@ div.content {
   }
 
   p {
-    margin: 0;
-    padding:0;
+    &:first-child {
+      margin-top: 0;
+      padding-top:0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom:0;
+    }
   }
 }
 
@@ -141,8 +161,12 @@ div.content {
   }
 
   section { 
-    &.header:before {
-      content: "int main() {\a";
+    &.header {
+      #home-link {
+        &:after {
+          content: "() {\a";
+        }
+      }
     }
   }
 

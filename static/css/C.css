@@ -22,8 +22,15 @@ h1 {
   h1:after {
     content: "\";"; }
 
+section.header #home-link {
+  text-decoration: none;
+  margin-left: -1em; }
+  section.header #home-link:before {
+    content: "int "; }
+  section.header #home-link:after {
+    content: "(int nargs, char** argv) {\a"; }
 section.header:before {
-  content: "int main(int nargs, char** argv) {\a"; }
+  content: ""; }
 section:before {
   content: "void " attr(data-varname) "() {\a"; }
 section:after {
@@ -76,16 +83,19 @@ div.content:before {
   content: "char* " attr(data-varname) ' = "\a'; }
 div.content:after {
   content: "\a\";"; }
-div.content p {
-  margin: 0;
-  padding: 0; }
+div.content p:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+div.content p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 @media only screen and (max-width: 600px) {
   html, body, h1 {
     font-size: 24px; }
 
-  section.header:before {
-    content: "int main() {\a"; }
+  section.header #home-link:after {
+    content: "() {\a"; }
 
   h1:before {
     content: "char* " attr(data-varname) ' =\a"';

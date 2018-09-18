@@ -1,0 +1,26 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Example C Site"
+theme = "C"
+
+[params] # theme parameters
+    author = "Lucien Brillant" # Author's name.
+    info = "Security and Functional Programming Nerd" # Author's job title or info.
+    description = "Lucien Brillant's personal website" # Site description.
+    keywords = "developer,personal" # Site keywords.
+
+[[params.social]]
+    name = "source"
+    weight = 1
+    url = "https://github.com/lsbrillant/hugo-c"
+
+# Menu links
+[[menu.main]]
+    name = "about"
+    weight = 1
+    url = "/post"
+[[menu.main]]
+    name = "contact"
+    weight = 2
+    url = "/post"
+
