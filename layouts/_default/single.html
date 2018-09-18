@@ -1,10 +1,10 @@
 {{ define "main" }}
 <section class="code-hacks" data-varname="
-{{- with .Params.varname }}
-  {{ . }}
-{{ else }}
-  {{ replace .Title " " "_" | replace "/" "" | lower }}
-{{ end }}">
+{{- with .Params.varname -}}
+  {{- . -}}
+{{- else -}}
+  {{- replace .Title " " "_" | lower -}}
+{{- end -}}">
   <h1 class="code-hacks" data-varname="title">
     {{- .Title -}}</h1>
   <div class="code-hacks content" data-varname="{{ replace .Title " " "_" | lower }}">
