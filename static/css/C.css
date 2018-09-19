@@ -10,7 +10,7 @@ a {
   color: orange;
   border-bottom: 1px solid orange;
   transition: .1s; }
-  a:hover {
+  a:hover, a:focus {
     color: #d90368;
     border-bottom: 2px solid #d90368; }
 
