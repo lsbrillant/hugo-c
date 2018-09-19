@@ -46,7 +46,7 @@ section {
   &.header {
     #home-link {
       text-decoration: none;
-      margin-left: -1em;
+      padding-left: 0;
       &:before {
         content: "int ";
       }
@@ -163,7 +163,6 @@ div.content {
   section { 
     &.header {
       #home-link {
-        margin-left: -1.1em;
         &:after {
           content: "() {\a";
         }

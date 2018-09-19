@@ -24,7 +24,7 @@ h1 {
 
 section.header #home-link {
   text-decoration: none;
-  margin-left: -1em; }
+  padding-left: 0; }
   section.header #home-link:before {
     content: "int "; }
   section.header #home-link:after {
@@ -94,10 +94,8 @@ div.content p:last-child {
   html, body, h1 {
     font-size: 24px; }
 
-  section.header #home-link {
-    margin-left: -1.1em; }
-    section.header #home-link:after {
-      content: "() {\a"; }
+  section.header #home-link:after {
+    content: "() {\a"; }
 
   h1:before {
     content: "char* " attr(data-varname) ' =\a"';
