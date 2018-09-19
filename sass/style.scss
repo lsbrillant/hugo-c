@@ -163,6 +163,7 @@ div.content {
   section { 
     &.header {
       #home-link {
+        margin-left: -1.1em;
         &:after {
           content: "() {\a";
         }
