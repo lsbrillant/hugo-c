@@ -15,4 +15,5 @@ a C program.
   git submodule add ./themes/C
   ```
 
-
+  ![screenshot](./exampleSite/screenshot.png)
+  ![mobile screenshot](./exampleSite/screenshot-mobile.png)
