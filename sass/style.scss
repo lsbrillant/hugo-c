@@ -32,14 +32,11 @@ h1 {
   white-space: nowrap;  
   &:before {
     content: "char* "attr(data-varname)" = \""; 
-    
   }
   
   &:after {
     content: "\";"; 
   }
-
-
 }
 
 section { 
@@ -59,7 +56,6 @@ section {
       content: "";
     }
   }
-  
 
   &:before { 
     content: "void "attr(data-varname)"() {\a";
