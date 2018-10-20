@@ -28,7 +28,7 @@ section.header #home-link {
   section.header #home-link:before {
     content: "int "; }
   section.header #home-link:after {
-    content: "(int nargs, char** argv) {\a"; }
+    content: "(int argc, char** argv) {\a"; }
 section.header:before {
   content: ""; }
 section:before {

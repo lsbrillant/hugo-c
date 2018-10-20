@@ -48,7 +48,7 @@ section {
         content: "int ";
       }
       &:after {
-        content: "(int nargs, char** argv) {\a";
+        content: "(int argc, char** argv) {\a";
       }
     }
 
