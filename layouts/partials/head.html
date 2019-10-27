@@ -8,7 +8,11 @@
 
   <link rel="stylesheet" type="text/css" href="/css/C.css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
-  
+  {{ with .Site.Params.customCss }}
+    {{ range $custom_css := . }}
+      <link rel="stylesheet" type="text/css" href="{{ $custom_css }}"/>
+    {{ end }}
+  {{ end }}
   <!--base href="{{ .Site.BaseURL }}"/-->
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 </head>
